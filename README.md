@@ -17,14 +17,14 @@ Sara Palma
 
 ### Contenido del informe:
 
-[ ] Diagrama de clases del modelo.
+-[ ] Diagrama de clases del modelo.
 
-[ ] Requisitos funcionales.
+-[ ] Requisitos funcionales.
 
-[ ] Diagramas de secuencias de los escenarios mas relevantes.
+-[ ] Diagramas de secuencias de los escenarios mas relevantes.
 
-[ ] Descripción de las Vistas.
+- [] Descripción de las Vistas.
 
-[ ] Descripción de los microservicios.
+- [ ] Descripción de los microservicios.
 
-[ ] Descripción de DTO, controladores y clases adicionales al modelo.
+-[] Descripción de DTO, controladores y clases adicionales al modelo.
