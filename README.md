@@ -1,14 +1,15 @@
-# TECONVIENE
+
+# Tarea de desarrollo con Spring, postgres y JSP
+***Apertura: martes, 7 de febrero de 2023, 00:00***
+
+***Cierre: domingo, 5 de marzo de 2023, 23:59***
+
+## TECONVIENE
 Juan Cebrián
 
 Ángel David Vilches
 
 Sara Palma
-
-## Tarea de desarrollo con Spring, postgres y JSP
-***Apertura: martes, 7 de febrero de 2023, 00:00***
-
-***Cierre: domingo, 5 de marzo de 2023, 23:59***
 
 ---
 
