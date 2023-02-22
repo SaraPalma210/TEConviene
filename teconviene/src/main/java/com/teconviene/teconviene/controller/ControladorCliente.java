@@ -16,7 +16,7 @@ public class ControladorCliente {
 
 
     @PostMapping("/cliente")
-    public Cliente createCliente(@Validated  @RequestBody	 Cliente cliente) {
+    public Cliente createCliente(@Validated  @ModelAttribute	 Cliente cliente) {
         return servicioCliente.saveCliente(cliente);
     }
 

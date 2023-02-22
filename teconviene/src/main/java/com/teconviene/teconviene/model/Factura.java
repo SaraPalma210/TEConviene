@@ -18,7 +18,7 @@ public class Factura {
     @Id
     private String id;
 
-    private Cliente cliente;
+    private String id_cliente;
 
     private List<Servicio> servicioList;
 

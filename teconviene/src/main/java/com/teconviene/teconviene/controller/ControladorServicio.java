@@ -16,7 +16,7 @@ public class ControladorServicio {
 
 
     @PostMapping("/servicio")
-    public Servicio createServicio(@Validated @RequestBody Servicio servicio) { // @ModelAttribute
+    public Servicio createServicio(@Validated @RequestBody @ModelAttribute Servicio servicio) { // @ModelAttribute
         return servicioServicio.saveServicio(servicio);
     }
 
