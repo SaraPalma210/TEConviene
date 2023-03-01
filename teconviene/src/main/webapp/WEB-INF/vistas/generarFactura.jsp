@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8" %>
+pageEncoding="UTF-8"
+import="java.util.List,com.teconviene.teconviene.model.*" %>
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -13,7 +14,7 @@ pageEncoding="UTF-8" %>
 <h1>Formulario factura</h1>
 </div class="caja">
 <form th:object="${factura}" action="/api/teconviene/factura" method="post">
-        Cliente: <select id = clientes>
+        Cliente: <select id="clientes" th:field="*{cliente}" name="cliente">
         <br>
             <%
             List<Cliente> l = (List<Cliente>) request.getAttribute("clientes");
