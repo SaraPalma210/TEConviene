@@ -14,13 +14,13 @@ import="java.util.List,com.teconviene.teconviene.model.*" %>
 <h1>Formulario factura</h1>
 </div class="caja">
 <form th:object="${factura}" action="/api/teconviene/factura" method="post">
-        Cliente: <select id="clientes" th:field="*{cliente}" name="cliente">
+        Cliente:  <select th:field="*{factura.cliente}" name="factura">
         <br>
             <%
             List<Cliente> l = (List<Cliente>) request.getAttribute("clientes");
             for (int i = 0; i < l.size(); i++) {
             %>
-            <option th:field="*{cliente.nombre}" name="nombre" value="<%=l.get(i).getNombre()%>"><%=l.get(i).getNombre()%></option> <br>
+            <option value="<%=l.get(i).getNombre()%>"><%=l.get(i).getNombre()%></option> <br>
             <%
             }
             %>
