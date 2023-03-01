@@ -13,13 +13,18 @@ pageEncoding="UTF-8" %>
 <h1>Formulario factura</h1>
 </div class="caja">
 <form th:object="${factura}" action="/api/teconviene/factura" method="post">
-        <b>ID:</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        <input th:field="*{id}" type="text" name="id"><br>
-        <b>ID Cliente:</b>
-        <input th:field="*{id_cliente}" type="text" name="id_cliente"><br>
-        : <input th:field="*{apellido}" type="text" name="apellido"><br>
-        Correo: <input th:field="*{correo}" type="text" name="correo"><br>
-        <input class="boton" type="submit" value="Confirmar">
+        Cliente: <select id = clientes>
+        <br>
+            <%
+            List<Cliente> l = (List<Cliente>) request.getAttribute("clientes");
+            for (int i = 0; i < l.size(); i++) {
+            %>
+            <option th:field="*{cliente.nombre}" name="nombre" value="<%=l.get(i).getNombre()%>"><%=l.get(i).getNombre()%></option> <br>
+            <%
+            }
+            %>
+            <br>
+        <input type="submit" value="Generar factura">
 </form>
 </div>
 </body>

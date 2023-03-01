@@ -18,7 +18,5 @@ public class Factura {
     @Id
     private String id;
 
-    private String id_cliente;
-
-    private double total;
+    private Cliente cliente;
 }
