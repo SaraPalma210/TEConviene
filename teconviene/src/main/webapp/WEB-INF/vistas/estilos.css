@@ -1,10 +1,40 @@
+body {
+    font-family: Cardana, Verdana, Geneva, Tahoma, sans-serif;
+    background: #EEEEEE;
+}
+
 h1 {
     text-align: center;
+    margin-top: 80px;
+    color: black;
 }
 
 form {
-    margin-left: 150px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 30px;
+    background: white;
 }
 input {
     margin-top: 25px;
+}
+
+.caja {
+    display: grid;
+    place-content: center;
+    margin-top: 50px;
+}
+
+.boton {
+    width: 100%;
+    background: dodgerblue;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    margin-top: 50px;
 }
