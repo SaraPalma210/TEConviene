@@ -12,16 +12,15 @@ import="java.util.List,com.teconviene.teconviene.model.*"%>
 <form th:object="${cliente}" action="/api/teconviene/cliente" method="post">
         ID Cliente: <input th:field="*{cliente.id}" type="text" name="id"><br>
         Servicio:
-                    <select th:field="*{servicio.id}" name="servicio.id">
                         <%
                             List<Servicio> l = (List<Servicio>) request.getAttribute("servicios");
                             for (int i = 0; i < l.size(); i++) {
                         %>
-                        <option value="<%=l.get(i).getId()%>"><%=l.get(i).getId()%></option>
+                        <input type="checkbox" th:field="*{servicios.id}" name="servicios.id" value="<%=l.get(i).getId()%>"><%=l.get(i).getId()%></option>
                         <%
                             }
                         %>
-                    </select>
+                        <br>
         <input type="submit" value="Confirmar">
 </form>
 </body>

@@ -12,7 +12,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Document("servicios")
 
-public class Servicio {
+public class Servicio implements Serializable{
     @Id
     private String id;
 

@@ -20,7 +20,5 @@ public class Factura {
 
     private String id_cliente;
 
-    private List<Servicio> servicioList;
-
     private double total;
 }

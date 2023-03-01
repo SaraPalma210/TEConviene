@@ -5,6 +5,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Setter
@@ -18,5 +19,7 @@ public class Cliente {
     private String nombre;
     private String apellido;
     private String correo;
+    private List<Servicio> lista_servicios;
+
 
 }
