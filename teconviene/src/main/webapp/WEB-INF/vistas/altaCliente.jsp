@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8" %>
+pageEncoding="UTF-8"
+import="java.util.List,com.teconviene.teconviene.model.*" %>
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -18,6 +19,16 @@ pageEncoding="UTF-8" %>
         <input th:field="*{nombre}" type="text" name="nombre"><br>
         Apellidos: <input th:field="*{apellido}" type="text" name="apellido"><br>
         Correo: <input th:field="*{correo}" type="text" name="correo"><br>
+        Servicio(s): <br>
+                                <%
+                                    List<Servicio> l = (List<Servicio>) request.getAttribute("servicios");
+                                    for (int i = 0; i < l.size(); i++) {
+                                %>
+                                <input type="checkbox" th:field="*{cliente.lista_servicios}" name="lista_servicios" value="<%=l.get(i).getId()%>"><%=l.get(i).getNombre()%></option> <br>
+                                <%
+                                    }
+                                %>
+                                <br>
         <input type="submit" value="Confirmar">
 </form>
 </body>
