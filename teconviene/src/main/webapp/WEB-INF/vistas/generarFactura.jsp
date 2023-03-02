@@ -11,22 +11,22 @@ import="java.util.List,com.teconviene.teconviene.model.*" %>
 </style>
 </head>
 <body>
-<h1>Formulario factura</h1>
-</div class="caja">
-<form th:object="${factura}" action="/api/teconviene/factura" method="post">
-        Cliente:  <select th:field="*{factura.cliente}" name="factura">
-        <br>
+    <h1>FORMULARIO FACTURA</h1>
+    <div class="caja">
+        <form th:object="${factura}" action="/api/teconviene/factura" method="post">
+            <b>Cliente:</b> &nbsp; &nbsp;
+            <select th:field="*{factura.cliente}" name="factura"><br>
             <%
             List<Cliente> l = (List<Cliente>) request.getAttribute("clientes");
             for (int i = 0; i < l.size(); i++) {
             %>
-            <option value="<%=l.get(i).getNombre()%>"><%=l.get(i).getNombre()%></option> <br>
+            <option class="option" value="<%=l.get(i).getNombre()%>"><%=l.get(i).getNombre()%></option> <br>
             <%
             }
             %>
             <br>
-        <input type="submit" value="Generar factura">
-</form>
-</div>
+            <input class="boton" type="submit" value="Generar factura">
+        </form>
+    </div>
 </body>
 </html>
