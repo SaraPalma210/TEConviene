@@ -27,4 +27,8 @@ public class ServicioFactura {
         facturaRepository.deleteById(id);
     }
 
+    public Factura getById(String id){
+        return facturaRepository.findById(id).get();
+    }
+
 }

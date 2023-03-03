@@ -17,7 +17,7 @@ public class ControladorFactura {
 
 
     @PostMapping("/factura")
-    public Factura createFactura(@Validated @RequestBody  Factura factura) { // @ModelAttribute
+    public Factura createFactura(@Validated @ModelAttribute  Factura factura) { // @ModelAttribute
         return servicioFactura.saveFactura(factura);
     }
 
